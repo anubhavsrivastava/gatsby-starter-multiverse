@@ -59,14 +59,13 @@ class Gallery extends Component {
     const gallery = images.map((obj, i) => {
       return (
         <article className="thumb" key={obj.src}>
-          <a
+          <span
             style={{
               backgroundImage: `url(${obj.src})`,
               cursor: 'pointer',
               outline: '0px',
             }}
             onClick={e => this.openLightbox(i, e)}
-            href={obj.thumbnail}
             className="image"
           >
             <img
@@ -75,7 +74,7 @@ class Gallery extends Component {
               alt=""
               title={obj.title}
             />
-          </a>
+          </span>
           <h2>{obj.title}</h2>
           <p>{obj.description}</p>
         </article>
