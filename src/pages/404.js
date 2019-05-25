@@ -4,12 +4,12 @@ import Layout from '../components/Layout';
 
 const IndexPage = () => (
   <Layout>
-    <section id="header">
+    <article className="container box style3">
       <header>
         <h2>NOT FOUND</h2>
       </header>
       <p>Not a valid URL</p>
-    </section>
+    </article>
   </Layout>
 );
 

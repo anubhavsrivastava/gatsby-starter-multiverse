@@ -20,6 +20,9 @@
   @include vendor('flex-wrap', 'wrap');
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
+  .container.box {
+    margin: 2em;
+  }
   .thumb {
     @include vendor('transition', ('opacity 1.25s ease-in-out'));
     @include vendor('pointer-events', 'auto');
