@@ -1,5 +1,7 @@
 import React from 'react';
 
+import config from '../../config';
+
 export default function Footer({ onClose, isVisible }) {
   return (
     <footer id="footer" className={`panel ${isVisible ? 'active' : ''}`}>
@@ -15,36 +17,16 @@ export default function Footer({ onClose, isVisible }) {
           <section>
             <h2>Follow me on ...</h2>
             <ul className="icons">
-              <li>
-                <a href="/#" className="icon fa-twitter">
-                  <span className="label">Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a href="/#" className="icon fa-facebook">
-                  <span className="label">Facebook</span>
-                </a>
-              </li>
-              <li>
-                <a href="/#" className="icon fa-instagram">
-                  <span className="label">Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a href="/#" className="icon fa-github">
-                  <span className="label">GitHub</span>
-                </a>
-              </li>
-              <li>
-                <a href="/#" className="icon fa-dribbble">
-                  <span className="label">Dribbble</span>
-                </a>
-              </li>
-              <li>
-                <a href="/#" className="icon fa-linkedin">
-                  <span className="label">LinkedIn</span>
-                </a>
-              </li>
+              {config.socialLinks.map(social => {
+                const { icon, name, url } = social;
+                return (
+                  <li key={url}>
+                    <a href={url} className={`icon ${icon}`}>
+                      <span className="label">{name}</span>
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         </div>

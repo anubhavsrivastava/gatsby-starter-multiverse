@@ -6,7 +6,7 @@ export default function Header({ onAction = () => {} }) {
     <header id="header">
       <h1>
         <a href="index.html">
-          <strong>{config.heading}</strong> {config.subHeading}
+          <strong>{config.heading}</strong> - {config.subHeading}
         </a>
       </h1>
       <nav>
