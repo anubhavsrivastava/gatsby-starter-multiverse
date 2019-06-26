@@ -76,7 +76,7 @@ class Gallery extends Component {
             />
           </span>
           <h2>{obj.title}</h2>
-          <p>{obj.description}</p>
+          <p>{obj.desc}</p>
         </article>
       );
     });
